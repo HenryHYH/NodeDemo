@@ -1,2 +1,12 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+<ul>
+    {{#each list}}
+    <li>
+        <a href="{{url}}" target="_blank">{{text}}</a>
+    </li>
+    {{/each}}
+</ul>
+{{#if user}}
+<a href="/logout">Logout</a> {{else}}
+<a href="/login">Login</a> {{/if}}
